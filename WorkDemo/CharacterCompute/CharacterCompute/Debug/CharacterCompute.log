@@ -1,0 +1,41 @@
+﻿生成启动时间为 10/30/2012 8:36:38 PM。
+     1>项目“E:\MyCode\TestCollection.git\WorkDemo\CharacterCompute\CharacterCompute\CharacterCompute.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\CharacterCompute.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“Debug\CharacterCompute.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ListType.c logger.c main.c network.c
+         network.c
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(59): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(131): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(197): error C2065: “sockaddr”: 未声明的标识符
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(197): error C2059: 语法错误:“)”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(200): error C2061: 语法错误: 标识符“Net_SendTcpPacket”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(200): error C2059: 语法错误:“;”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(200): error C2059: 语法错误:“类型”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(238): error C2065: “sockaddr”: 未声明的标识符
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(238): error C2059: 语法错误:“)”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(248): error C2061: 语法错误: 标识符“Net_RecieveTcpPacket”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(248): error C2059: 语法错误:“;”
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\network.c(248): error C2059: 语法错误:“类型”
+         main.c
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\main.c(15): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\time.inl(112) : 参见“localtime”的声明
+         logger.c
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\logger.c(20): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\logger.c(28): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\time.inl(112) : 参见“localtime”的声明
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\logger.c(38): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“vsprintf”的声明
+         ListType.c
+     1>e:\mycode\testcollection.git\workdemo\charactercompute\charactercompute\listtype.c(45): error C2082: 形参“element”的重定义
+         正在生成代码...
+     1>已完成生成项目“E:\MyCode\TestCollection.git\WorkDemo\CharacterCompute\CharacterCompute\CharacterCompute.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.79

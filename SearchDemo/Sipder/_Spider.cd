@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sipder.Fecther">
+    <Position X="2.75" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAgAAEASAAACAAIFAgEBRAAAAAAAAQAAQAAADAAAA=</HashCode>
+      <FileName>Fecther.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sipder.DataModel.HtmlDocInfo">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQBQAAAAAAAAAAAAEAAQAAAAgAAAAAAAAA=</HashCode>
+      <FileName>DataModel\HtmlDocInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sipder.DataModel.FectcherUrl">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAADAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>DataModel\FectcherUrl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sipder.DataModel.HtmlDoc">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAgCAAAAAAIA=</HashCode>
+      <FileName>DataModel\HtmlDoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sipder.Extractor">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAABAAABAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Extractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sipder.Worker">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAABAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Sipder.DataModel.SiteType">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAAMAAAAAAAAAAAAAAAAAAAAgIAAAAAAAAQAAAAg=</HashCode>
+      <FileName>DataModel\HtmlDocInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sipder.DataModel.PageType">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABCAA=</HashCode>
+      <FileName>DataModel\HtmlDocInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sipder.WorkStatus" Collapsed="true">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAARAAAEAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Worker.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

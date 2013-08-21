@@ -1,0 +1,10 @@
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\bin\Debug\XMPPClient.exe
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\bin\Debug\XMPPClient.pdb
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\bin\Debug\agsXMPP.dll
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\bin\Debug\agsXMPP.pdb
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\XMPPClient.Properties.Resources.resources
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\XMPPClient.exe
+E:\MyCode\TestCollection.git\XMPP\XMPPClient\XMPPClient\obj\x86\Debug\XMPPClient.pdb

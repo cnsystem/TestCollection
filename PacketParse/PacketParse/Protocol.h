@@ -10,8 +10,8 @@ public:
 	
 	uint32 GetOffSet();
 	uint32 GetHeaderLen();
-	byte* GetBuffer(uint32* uiLen);
-	byte* GetPayload(uint32* uiLen);
+	Buffer GetBuffer();
+	Buffer GetPayload();
 
 	virtual bool Parse();
 	virtual Protocol GetUpperProtocol();
@@ -19,9 +19,8 @@ public:
 
 	~Protocol(void);
 protected:
-	bool bCreateBuf;
 
-	void SetBuf(byte* buffer, uint32 len);
+	void SetBuf(Buffer buf);
 	void SetOffSet(uint32 uiOffset);
 	
 private:

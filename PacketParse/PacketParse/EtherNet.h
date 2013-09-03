@@ -4,7 +4,8 @@ class EtherNet :
 	public Protocol
 {
 public:
-	EtherNet(void);
+	EtherNet(Packet& pack);
+	EtherNet(Protocol* obj);
 	~EtherNet(void);
 };
 

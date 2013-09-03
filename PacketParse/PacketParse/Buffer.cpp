@@ -27,6 +27,7 @@ void Buffer::ResetLen(uint32 len)
 		free(pstBuffer);
 	pstBuffer = buf;
 	uiLen = len;
+	bCreate = true;
 }
 byte* Buffer::GetBuffer(uint32* length)
 {
@@ -34,6 +35,13 @@ byte* Buffer::GetBuffer(uint32* length)
 	return pstBuffer;
 }
 
+Buffer Buffer::GetBufferByOffSet(uint32 offset)
+{
+	byte* buf = pstBuffer + offset;
+	uint32 len = uiLen - offset;
+	Buffer newBuf(buf, len);
+	return newBuf;
+}
 
 Buffer::~Buffer(void)
 {

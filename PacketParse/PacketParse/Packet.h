@@ -1,6 +1,6 @@
 #pragma once
 #include "Buffer.h"
-#include "Protocol.h"
+class Protocol;
 class Packet
 {
 public:
@@ -20,7 +20,7 @@ public:
 	void Parse();
 private:
 	Buffer* buffer; 
-	Buffer* data;
+	Buffer data;
 
 	Protocol* protoStack;
 };

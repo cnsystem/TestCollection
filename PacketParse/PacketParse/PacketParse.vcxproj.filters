@@ -39,6 +39,21 @@
     <ClInclude Include="EtherNet.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="StringHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IpNet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UdpNet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RtpNet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RtcpNet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -54,6 +69,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="EtherNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IpNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UdpNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RtpNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RtcpNet.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

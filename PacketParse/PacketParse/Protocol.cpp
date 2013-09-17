@@ -2,20 +2,17 @@
 #include "Protocol.h"
 #include <stdio.h>
 #include "Packet.h"
-
 #include "EtherNet.h"
 Protocol::Protocol(Protocol* obj)
-	:euProto(UNKOWN),uiOffset(0),uiHeaderLen(0),pstPreProtcol(obj),pstPostProtcol(NULL)
+	:eProto(UNKOWN),uiOffset(0),uiHeaderLen(0),pstPreProtcol(obj),pstPostProtcol(NULL)
 {
 	pstPacket = obj->pstPacket;
-	pstPayload = obj->GetBuffer().GetBufferByOffSet(uiHeaderLen);
 }
 
 Protocol::Protocol(Packet& pack)
-	:euProto(UNKOWN),uiOffset(0),uiHeaderLen(0),pstPreProtcol(NULL),pstPostProtcol(NULL)
+	:eProto(UNKOWN),uiOffset(0),uiHeaderLen(0),pstPreProtcol(NULL),pstPostProtcol(NULL)
 {
 	pstPacket = &pack;
-	pstPayload = pack.GetData().GetBufferByOffSet(uiHeaderLen);
 }
 
 uint32 Protocol::GetOffSet()
@@ -26,28 +23,43 @@ uint32 Protocol::GetHeaderLen()
 {
 	return uiHeaderLen;
 }
-Buffer Protocol::GetBuffer()
+Buffer* Protocol::GetBuffer()
 {
-	return pstPacket->GetBuffer();
+	return pstBuffer;
 }
-Buffer Protocol::GetPayload()
+Buffer* Protocol::GetPayload()
 {
 	return pstPayload;
+}
+bool Protocol::CheckBuff()
+{
+	if(!pstPacket || !(pstPacket->GetData()))
+		return false;
+	pstBuffer = pstPacket->GetData()->GetBufferByOffSet(uiOffset);
+	if(!pstBuffer)
+		return false;
+	pstPayload = pstBuffer->GetBufferByOffSet(uiHeaderLen);
+	if(!pstPayload)
+		return false;
+	return true;
 }
 //解析上层协议，构建协议栈
 bool Protocol::Parse()
 {
-	pstPostProtcol = new EtherNet(this);
-	pstPostProtcol->SetOffSet(uiOffset + uiHeaderLen);
-	//pstPostProtcol->SetLowerProtocol(this);
+	return CheckBuff();
 }
 Protocol* Protocol::GetUpperProtocol()
 {
-	return pstPreProtcol;
+	if(pstPostProtcol == NULL)
+	{
+		pstPostProtcol = new EtherNet(this);
+		pstPostProtcol->SetOffSet(uiOffset + uiHeaderLen);
+	}
+	return pstPostProtcol;
 }
 Protocol* Protocol::GetLowerProtocol()
 {
-	return pstPostProtcol;
+	return pstPreProtcol;
 }
 
 void Protocol::SetLowerProtocol(Protocol* pre)
@@ -55,16 +67,14 @@ void Protocol::SetLowerProtocol(Protocol* pre)
 	pstPreProtcol = pre;
 }
 
-//void SetBuf(byte* buffer, uint32 len)
-//{
-//
-//}
-//void SetOffSet(uint32 uiOffset)
-//{
-//
-//}
+void Protocol::SetOffSet(uint32 offset)
+{
+	uiOffset = offset;
+}
 
 
 Protocol::~Protocol(void)
 {
+	delete pstBuffer;
+	delete pstPayload;
 }

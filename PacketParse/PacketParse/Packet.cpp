@@ -9,33 +9,29 @@ Packet::Packet(Buffer& buf)
 
 void Packet::SetBuffer(Buffer& buf)
 {
-	/*byte* pstBuf;
-	uint32 len;
 	buffer = &buf;
-	pstBuf = buffer->GetBuffer(&len);
-	pstBuf = pstBuf + sizeof(packet_hdr);
-	len -= sizeof(packet_hdr);
-	data = new Buffer(pstBuf, len);*/
 	data = buf.GetBufferByOffSet(sizeof(packet_hdr));
 }
 void Packet::Parse()
 {
 	protoStack = new Protocol(*this);
 	Protocol* temp = protoStack;
-	while(temp->Parse())
+	while(temp->Parse() && temp->GetUpperProtocol())
 	{
+		temp->GetUpperProtocol()->SetLowerProtocol(temp);
 		temp = temp->GetUpperProtocol();
 	}
 }
-Buffer Packet::GetBuffer()
+Buffer* Packet::GetBuffer()
 {
-	return *buffer;
+	return buffer;
 }
-Buffer Packet::GetData()
+Buffer* Packet::GetData()
 {
 	return data;
 }
 
 Packet::~Packet(void)
 {
+	delete data;
 }

@@ -35,11 +35,14 @@ byte* Buffer::GetBuffer(uint32* length)
 	return pstBuffer;
 }
 
-Buffer Buffer::GetBufferByOffSet(uint32 offset)
+Buffer* Buffer::GetBufferByOffSet(uint32 offset)
 {
 	byte* buf = pstBuffer + offset;
 	uint32 len = uiLen - offset;
-	Buffer newBuf(buf, len);
+	Buffer* newBuf;
+	if(len < 0)
+		return NULL;
+	newBuf = new Buffer(buf, len);
 	return newBuf;
 }
 

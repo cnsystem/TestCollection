@@ -9,8 +9,8 @@ public:
 	~Packet(void);
 
 	void SetBuffer(Buffer& buf);
-	Buffer GetBuffer();
-	Buffer GetData();
+	Buffer* GetBuffer();
+	Buffer* GetData();
 
 	void GetEtherPacket();
 	void GetIpNet();
@@ -20,7 +20,7 @@ public:
 	void Parse();
 private:
 	Buffer* buffer; 
-	Buffer data;
+	Buffer* data;
 
 	Protocol* protoStack;
 };

@@ -6,6 +6,21 @@ class EtherNet :
 public:
 	EtherNet(Packet& pack);
 	EtherNet(Protocol* obj);
+
+	int8* GetSrcHost();
+	int8* GetDstHost();
+
+	void SetSrcHost(int8* srcHost);
+	void SetDstHost(int8* dstHost);
+
+	virtual bool Parse();
+	Protocol* GetUpperProtocol();
+	Protocol* GetLowerProtocol();
 	~EtherNet(void);
+protected:
+	eth_header* header;
+	int8 srcAddr[256];
+	int8 dstAddr[256];
+	void hex2str(int8* str, uint8* buffer, uint32 len);
 };
 

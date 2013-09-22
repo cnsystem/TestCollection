@@ -82,11 +82,33 @@ class RtcpNet :
 	public Protocol
 {
 public:
-	RtcpNet(void);
+	RtcpNet(Packet& pack);
+	RtcpNet(Protocol* obj);
 
+	uint32 GetVersion();;
+	rtcp_type_t GetRtcpType();
+	uint32 GetRtcpCount();
+	bool IsPadding();
+	uint32 GetLength();
+
+	class Rtcp_Sr
+	{
+
+	};
+	class Rtcp_Rr
+	{};
+	class Rtcp_App
+	{};
+	class Rtcp_Bye
+	{};
+
+	Rtcp_App *app;
+	Rtcp_Bye *bye;
+	Rtcp_Sr *sender_report;
+	Rtcp_Rr *reciever_report;
 	virtual bool Parse();
-	Protocol* GetUpperProtocol();
-	Protocol* GetLowerProtocol();
+	virtual Protocol* GetUpperProtocol();
+	virtual Protocol* GetLowerProtocol();
 	~RtcpNet(void);
 protected:
 	rtcp_type_t rtcp_type;

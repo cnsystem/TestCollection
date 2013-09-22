@@ -14,8 +14,8 @@ public:
 	void SetDstHost(int8* dstHost);
 
 	virtual bool Parse();
-	Protocol* GetUpperProtocol();
-	Protocol* GetLowerProtocol();
+	virtual Protocol* GetUpperProtocol();
+	virtual Protocol* GetLowerProtocol();
 	~EtherNet(void);
 protected:
 	eth_header* header;

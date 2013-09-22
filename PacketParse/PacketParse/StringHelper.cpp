@@ -13,7 +13,7 @@ void StringHelper::byte2str(byte data, int8& ch0, int8& ch1)
 	ch1 = data & 0x0F;
 	ch1 = ch1 > 9 ? ch1 - 10 + 'A' : ch1 + '0';
 }
-void StringHelper::int2str(int32 data, int8* buffer)
+int32 StringHelper::int2str(uint32 data, int8* buffer)
 {
 	int32 index = 0;
 	//此处先倒序存储
@@ -24,6 +24,7 @@ void StringHelper::int2str(int32 data, int8* buffer)
 	}while((data = data/10) != 0);
 	//此处在倒序一下
 	reverse(buffer, index);
+	return index;
 }
 void StringHelper::reverse(int8* buffer, int32 start, int32 end)
 {

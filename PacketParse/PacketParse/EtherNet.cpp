@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "EtherNet.h"
 #include "StringHelper.h"
-
+#include "IpNet.h"
 EtherNet::EtherNet(Packet& pack):Protocol(pack),header(NULL)
 {
 	eProto = ETHER_NET;
@@ -15,7 +15,7 @@ EtherNet::EtherNet(Protocol* obj):Protocol(obj),header(NULL)
 
 void EtherNet::hex2str(int8* str, uint8* buffer, uint32 len)
 {
-	int i;
+	int32 i;
 	for(i = 0; i<len; i++)
 	{
 		StringHelper::byte2str(buffer[i], str[3*i], str[3*i+1]);
@@ -38,11 +38,12 @@ void EtherNet::SetSrcHost(int8* srcHost)
 }
 void SetDstHost(int8* dstHost)
 {
+
 }
 
 bool EtherNet::Parse()
 {
-	int length;
+	uint32 length;
 	if(!CheckBuff())
 		return false;
 	header = (eth_header*)pstBuffer->GetBuffer(&length);
@@ -52,6 +53,11 @@ bool EtherNet::Parse()
 }
 Protocol* EtherNet::GetUpperProtocol()
 {
+	if(pstPostProtcol == NULL)
+	{
+		pstPostProtcol = new IpNet(this);
+		pstPostProtcol->SetOffSet(uiOffset + uiHeaderLen);
+	}
 	return pstPostProtcol;
 }
 Protocol* EtherNet::GetLowerProtocol()

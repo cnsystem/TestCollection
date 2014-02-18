@@ -30,7 +30,7 @@ void StringHelper::reverse(int8* buffer, int32 start, int32 end)
 {
 	int middle = (end - start)/2;
 	int8 temp;
-	for(int i = start; i < middle; i++)
+	for(int i = start; i <= middle; i++)
 	{
 		temp = buffer[i];
 		buffer[i] = buffer[end - i];
@@ -39,7 +39,7 @@ void StringHelper::reverse(int8* buffer, int32 start, int32 end)
 }
 void StringHelper::reverse(int8* buffer, int32 length)
 {
-	reverse(buffer, 0, length);
+	reverse(buffer, 0, length - 1);
 }
 StringHelper::~StringHelper(void)
 {

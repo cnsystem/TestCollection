@@ -66,13 +66,17 @@ void Protocol::SetLowerProtocol(Protocol* pre)
 {
 	pstPreProtcol = pre;
 }
-
+proto_type Protocol::GetType()
+{
+	return eProto;
+}
 void Protocol::SetOffSet(uint32 offset)
 {
 	uiOffset = offset;
 }
 
-
+void Protocol::PrintInfo()
+{}
 Protocol::~Protocol(void)
 {
 	delete pstBuffer;

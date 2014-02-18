@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="audio_device">
+      <UniqueIdentifier>{86aacdbb-0f75-4f3e-a013-e6ab6dddb71e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio_device\windows">
+      <UniqueIdentifier>{1d00b38f-d8bb-4b17-9d41-29229bd24161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio_device\include">
+      <UniqueIdentifier>{f6c5cae6-0c1b-4d3a-8215-46f238ba433b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio_device\audio_device_buffer.cc">
+      <Filter>audio_device</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\audio_device_generic.cc">
+      <Filter>audio_device</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\audio_device_impl.cc">
+      <Filter>audio_device</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\audio_device_utility.cc">
+      <Filter>audio_device</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\win\audio_device_core_win.cc">
+      <Filter>audio_device\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\win\audio_device_utility_win.cc">
+      <Filter>audio_device\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\win\audio_device_wave_win.cc">
+      <Filter>audio_device\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device\win\audio_mixer_manager_win.cc">
+      <Filter>audio_device\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio_device\audio_device_buffer.h">
+      <Filter>audio_device</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\audio_device_config.h">
+      <Filter>audio_device</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\audio_device_generic.h">
+      <Filter>audio_device</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\audio_device_impl.h">
+      <Filter>audio_device</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\audio_device_utility.h">
+      <Filter>audio_device</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\win\audio_device_core_win.h">
+      <Filter>audio_device\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\win\audio_device_utility_win.h">
+      <Filter>audio_device\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\win\audio_device_wave_win.h">
+      <Filter>audio_device\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\win\audio_mixer_manager_win.h">
+      <Filter>audio_device\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\include\audio_device.h">
+      <Filter>audio_device\include</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\include\audio_device_defines.h">
+      <Filter>audio_device\include</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device\include\fake_audio_device.h">
+      <Filter>audio_device\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MediaApp.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_Device.cd">
+      <Filter>audio_device</Filter>
+    </None>
+  </ItemGroup>
+</Project>

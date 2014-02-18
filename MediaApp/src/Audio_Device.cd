@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="webrtc::AudioDeviceUtility" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAUAAAAAAAAAAAACAEAAAAA=</HashCode>
+      <FileName>audio_device\audio_device_utility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceObserver" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAIAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\include\audio_device_defines.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceBuffer" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>jhBSpIEBBAAKIEBgAB1CAAQAAICIGgAggcoAAgAUCA4=</HashCode>
+      <FileName>audio_device\audio_device_buffer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceGeneric" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IFJlljggSNQIKEJAChIjUBiMAMCoAEJAB4oWpDgImhI=</HashCode>
+      <FileName>audio_device\audio_device_generic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceModuleImpl" Collapsed="true">
+    <Position X="0.5" Y="2" Width="2" />
+    <NestedTypes>
+      <Enum Name="webrtc::AudioDeviceModuleImpl::PlatformType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>audio_device\audio_device_impl.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>JFJXlDogZvQobkJADhpjUAiMAEDoAEJID5oWwDoKuhM=</HashCode>
+      <FileName>audio_device\audio_device_impl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioMixerManager" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IhJAE0CgAIBGLChQCgFBEAhAUOLAQgUQF5oGGCihiUA=</HashCode>
+      <FileName>audio_device\win\audio_mixer_manager_win.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::ScopedCOMInitializer" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAABAAAQAAAAAAgAAAAAABAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceWindowsCore" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>JHJvd7xo2f+crIJ4mjLzVhmc+MDsg2J1D96vrz2N37Y=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceUtilityWindows" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAIAAAAAAABAAAAAAAAAAAAAABgCAgAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_utility_win.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceWindowsWave" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>4NJ3finszfW4arrkTjZbVjWEBRTC_OE6oVEJZd8sPvX0t2rY=</HashCode>
+      <FileName>audio_device\win\audio_device_wave_win.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::`anonymous-namespace'::MediaBufferImpl" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIoAAAABAAARAAAABgAAAAAQAAAgAAABAAAABAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.cc</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::FakeAudioDeviceModule" Collapsed="true">
+    <Position X="3.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>JFJVlDggZtQYLEJAChgjUAiMAECoAEJIB4oWgDoImhI=</HashCode>
+      <FileName>audio_device\include\fake_audio_device.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioDeviceModule" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>JFJVlDggZtQIKEBAClgjUAiMAECoAEJIB4oWgDoImhI=</HashCode>
+      <FileName>audio_device\include\audio_device.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webrtc::AudioTransport" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAI=</HashCode>
+      <FileName>audio_device\include\audio_device_defines.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="tagTHREADname_INFO" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAACAAEAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.cc</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="THREADname_INFO" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.cc</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PAvRevertMmThreadCharacteristics" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PAvSetMmThreadCharacteristicsA" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PAvSetMmThreadPriority" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PGNSI" Collapsed="true">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_utility_win.cc</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PGPI" Collapsed="true">
+    <Position X="11.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_utility_win.cc</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="__unnamed_enum_0004_1" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\audio_device_config.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0004_2" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\audio_device_config.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="webrtc::__unnamed_enum_00c8_1" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_wave_win.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="webrtc::__unnamed_enum_00c8_2" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_wave_win.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="webrtc::`anonymous-namespace'::__unnamed_enum_00c3_1" Collapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.cc</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="webrtc::`anonymous-namespace'::__unnamed_enum_00c3_2" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>audio_device\win\audio_device_core_win.cc</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

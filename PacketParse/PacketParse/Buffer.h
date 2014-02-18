@@ -12,6 +12,7 @@ public:
 	void ResetLen(uint32 len);
 	byte* GetBuffer(uint32* length);
 	Buffer* GetBufferByOffSet(uint32 offset);
+	Buffer* GetBufferByOffSet(uint32 start, uint32 end);
 private:
 	byte*	pstBuffer;
 	uint32	uiLen;

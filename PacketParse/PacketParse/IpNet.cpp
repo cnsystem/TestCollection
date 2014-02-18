@@ -2,29 +2,29 @@
 #include "IpNet.h"
 #include "StringHelper.h"
 #include "UdpNet.h"
-
 IpNet::IpNet(Packet& pack):Protocol(pack),header(NULL)
 {
 	eProto = IP_NET;
+	uiHeaderLen = sizeof(ip_header);
 }
 IpNet::IpNet(Protocol* obj):Protocol(obj),header(NULL)
 {
 	eProto = IP_NET;
 	uiHeaderLen = sizeof(ip_header);
 }
-uint32 IpNet::IpNet::GetVersion()
+uint32 IpNet::GetVersion()
 {
 	uint32 version= (uint32)(header->ver_ihl >> 4);
 	return version;
 }
-uint32 IpNet::IpNet::GetTosValue()
+uint32 IpNet::GetTosValue()
 {
-	uint32 tos_value = (uint32)(header->tos);
+	uint32 tos_value = (uint32)(SWAP16(header->tos));
 	return tos_value;
 }
-uint32 IpNet::IpNet::GetTotalLength()
+uint32 IpNet::GetTotalLength()
 {
-	uint32 total_length = (uint32)(header->tlen);
+	uint32 total_length = (uint32)(SWAP16(header->tlen));
 	return total_length;
 }
 uint32 IpNet::GetFlags()
@@ -48,7 +48,7 @@ proto_type IpNet::GetProtoType()
 	{
 	case 17:
 		return UDP;
-	case 7:
+	case 6:
 		return TCP;
 	default:
 		return UNKOWN;
@@ -56,7 +56,7 @@ proto_type IpNet::GetProtoType()
 }
 uint32 IpNet::GetCRC()
 {
-	uint32 crc = (uint32)(header->ip_crc);
+	uint32 crc = (uint32)(SWAP16(header->ip_crc));
 	return crc;
 }
 
@@ -76,12 +76,13 @@ bool IpNet::Parse()
 		return false;
 	header = (ip_header*)pstBuffer->GetBuffer(&length);
 	uiHeaderLen = (header->ver_ihl & 0x0F) * 4;
-	hex2str(srcAddr, (uint8*)header->src_addr, sizeof(header->src_addr));
-	hex2str(dstAddr, (uint8*)header->dst_addr, sizeof(header->dst_addr));
+	hex2str(srcAddr, (uint8*)(&header->src_addr), sizeof(header->src_addr));
+	hex2str(dstAddr, (uint8*)(&header->dst_addr), sizeof(header->dst_addr));
 	//对负载偏移从新计算
 	pstPayload = pstBuffer->GetBufferByOffSet(uiHeaderLen);
 	if(!pstPayload)
 		return false;
+	return true;
 }
 Protocol* IpNet::GetUpperProtocol()
 {
@@ -91,6 +92,19 @@ Protocol* IpNet::GetUpperProtocol()
 		pstPostProtcol->SetOffSet(uiOffset + uiHeaderLen);
 	}
 	return pstPostProtcol;
+}
+void IpNet::PrintInfo()
+{
+	printf("version: %d\n", GetVersion());
+	printf("tos: %d\n", GetTosValue());
+	printf("total length: %d\n", GetTotalLength());
+	printf("flags: %d\n", GetFlags());
+	printf("slice offset: %d\n", GetSliceOffset());
+	printf("ttl: %d\n", GetTtl());
+	printf("prototype: %d\n", GetProtoType());
+	printf("crc: %x\n", GetCRC());
+	printf("src address: %s\n", GetSrcIpAddr());
+	printf("src address: %s\n", GetDstIpAddr());
 }
 Protocol* IpNet::GetLowerProtocol()
 {
@@ -106,9 +120,10 @@ void IpNet::hex2str(int8* str, uint8* buffer, uint32 len)
 		*(str + offset) = '.';
 		offset++;
 	}
-	*(str + offset) = '.';
+	*(str + offset - 1) = '\0';
 }
 
 IpNet::~IpNet(void)
 {
+	printf("release ip net\n");
 }

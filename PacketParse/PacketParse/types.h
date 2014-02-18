@@ -10,6 +10,21 @@
 
 #ifndef TYPES_H
 #define TYPES_H
+#define DO_SWAP
+#ifdef DO_SWAP
+#define SWAP16(x) \
+		  (((x & 0x00ff) << 8) | \
+		  ((x & 0xff00) >> 8))
+
+#define SWAP32(x) \
+		  (((x & 0x000000ff) << 24) | \
+		  ((x & 0xff000000) >> 24) | \
+		  ((x & 0x00ff0000) >> 8) | \
+		  ((x & 0x0000ff00) << 8))
+#else
+#define SWAP16(x) (x)
+#define SWAP32(x) (x)
+#endif /* DO_SWAP */
 
 typedef unsigned char byte;
 typedef unsigned char uint8;
@@ -69,12 +84,6 @@ typedef struct rtp_header {
 	uint32	ts;
 	uint32	ssrc;
 }rtp_header;
-
-typedef struct rtcp_header {
-	uint8	ether_dhost[ETH_ADDR_LEN];
-	uint8	ether_shost[ETH_ADDR_LEN];
-	uint16	ether_type;
-}rtcp_header;
 
 typedef struct time_val
 {

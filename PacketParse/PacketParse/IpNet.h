@@ -22,6 +22,7 @@ public:
 	virtual bool Parse();
 	virtual Protocol* GetUpperProtocol();
 	virtual Protocol* GetLowerProtocol();
+	virtual void PrintInfo();
 	~IpNet(void);
 protected:
 	ip_header* header;

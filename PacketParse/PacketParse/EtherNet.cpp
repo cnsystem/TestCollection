@@ -21,7 +21,7 @@ void EtherNet::hex2str(int8* str, uint8* buffer, uint32 len)
 		StringHelper::byte2str(buffer[i], str[3*i], str[3*i+1]);
 		str[3*i+2] = '-';
 	}
-	str[3*i+2] = '\0';
+	str[3*i-1] = '\0';
 }
 
 int8* EtherNet::GetSrcHost()
@@ -65,6 +65,11 @@ Protocol* EtherNet::GetLowerProtocol()
 	return pstPreProtcol;
 }
 
+void EtherNet::PrintInfo()
+{
+	printf("src host: %s\n", GetSrcHost());
+	printf("dst host: %s\n", GetDstHost());
+}
 EtherNet::~EtherNet(void)
 {
 }

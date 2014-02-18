@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaApp", "..\src\MediaApp.vcxproj", "{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "system_wrappers", "..\src\system_wrappers\source\system_wrappers.vcxproj", "{0308E328-158B-FFDE-71FE-DA9D30389914}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Debug|Win32.Build.0 = Debug|Win32
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Debug|x64.ActiveCfg = Debug|Win32
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Release|Win32.ActiveCfg = Release|Win32
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Release|Win32.Build.0 = Release|Win32
+		{5591DF8C-00F3-4E90-9F2F-4ED292698DE2}.Release|x64.ActiveCfg = Release|Win32
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Debug|Win32.Build.0 = Debug|Win32
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Debug|x64.ActiveCfg = Debug|x64
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Debug|x64.Build.0 = Debug|x64
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Release|Win32.ActiveCfg = Release|Win32
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Release|Win32.Build.0 = Release|Win32
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Release|x64.ActiveCfg = Release|x64
+		{0308E328-158B-FFDE-71FE-DA9D30389914}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

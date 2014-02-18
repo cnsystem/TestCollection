@@ -16,6 +16,7 @@ public:
 	virtual bool Parse();
 	virtual Protocol* GetUpperProtocol();
 	virtual Protocol* GetLowerProtocol();
+	virtual void PrintInfo();
 	~EtherNet(void);
 protected:
 	eth_header* header;

@@ -15,6 +15,7 @@ public:
 	virtual bool Parse();
 	virtual Protocol* GetUpperProtocol();
 	virtual Protocol* GetLowerProtocol();
+	virtual void PrintInfo();
 	~UdpNet(void);
 protected:
 	udp_header* header;

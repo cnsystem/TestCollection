@@ -17,11 +17,12 @@ public:
 	Buffer* GetPayload();
 	bool CheckBuff();
 	void SetLowerProtocol(Protocol* pre);
-
+	proto_type GetType();
 	virtual bool Parse();
 	virtual Protocol* GetUpperProtocol();
 	virtual Protocol* GetLowerProtocol();
-	
+	virtual void PrintInfo();
+
 	Packet* pstPacket;
 	~Protocol(void);
 protected:
